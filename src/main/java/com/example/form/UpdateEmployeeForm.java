@@ -1,7 +1,7 @@
 package com.example.form;
 
 /**
- * 従業員更新時に使用
+ * 従業員情報更新フォーム
  */
 public class UpdateEmployeeForm {
     
