@@ -76,8 +76,10 @@ public class AdministratorController {
      * ログイン情報を確認する
      * 
      * @param form ログイン情報
-     * @return administrator/login ログインページ
-     * @return redirect:/employee/showList 従業員情報一覧ページ
+     * @return <ol>
+     * <li>administrator/login ログインページ</li>
+     * <li>redirect:/employee/showList 従業員情報一覧ページ</li>
+     * </ol>
      */
     @PostMapping("/login")
     public String login(LoginForm form, Model model) {
