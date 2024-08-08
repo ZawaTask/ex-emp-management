@@ -48,7 +48,7 @@ public class AdministratorRepository {
      * @return administratorList 管理者情報のリスト
      */
     public Administrator findByMailAddressAndPassword(String mailAddress, String password) {
-        String sql = "SELECT * FROM administrators WHERE mail_Address = :mail_Address AND password = :password";
+        String sql = "SELECT id, name, mail_address, password FROM administrators WHERE mail_Address = :mail_Address AND password = :password";
         Map<String, Object> params = Map.of(
                 "mail_Address", mailAddress,
                 "password", password);

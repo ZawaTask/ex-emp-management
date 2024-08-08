@@ -76,7 +76,8 @@ public class AdministratorController {
      * ログイン情報を確認する
      * 
      * @param form ログイン情報
-     * @return <ol>
+     * @return 以下のパターンを使用
+     * <ol>
      * <li>administrator/login ログインページ</li>
      * <li>redirect:/employee/showList 従業員情報一覧ページ</li>
      * </ol>
