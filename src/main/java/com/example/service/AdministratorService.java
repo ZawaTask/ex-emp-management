@@ -19,7 +19,7 @@ public class AdministratorService {
 
     /**
      * 管理者情報を登録する
-     * @param administrator
+     * @param administrator 管理者情報
      */
     public void insert(Administrator administrator){
         administratorRepository.insert(administrator);
