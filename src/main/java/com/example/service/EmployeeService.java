@@ -9,9 +9,9 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.domain.Employee;
 import com.example.repository.EmployeeRepository;
 
-    /**
-     * 従業員一覧を全件検索する業務処理
-     */
+/**
+* 従業員一覧を全件検索する業務処理
+*/
 @Service
 @Transactional
 public class EmployeeService {

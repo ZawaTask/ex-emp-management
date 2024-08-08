@@ -11,10 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.example.domain.Employee;
 import com.example.service.EmployeeService;
 
-
-    /**
-     * 従業員情報を全権取得する
-     */
+/**
+ * 従業員情報を全権取得する
+ */
 @Controller
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -28,11 +27,11 @@ public class EmployeeController {
      * @return 従業員一覧画面
      */
     @GetMapping("/showList")
-    public String showList(Model model){
+    public String showList(Model model) {
         List<Employee> employeeList = employeeService.showList();
 
         model.addAttribute("employeeList", employeeList);
-        
+
         return "employee/list";
     }
 }

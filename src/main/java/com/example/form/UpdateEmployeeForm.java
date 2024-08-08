@@ -1,8 +1,8 @@
 package com.example.form;
 
-    /**
-     * 従業員更新
-     */
+/**
+ * 従業員更新時に使用
+ */
 public class UpdateEmployeeForm {
     
     private String id;
