@@ -36,7 +36,7 @@ public class AdministratorRepository {
         String sql = "INSERT INTO administrators (name, mail_Address, password) VALUES (:name, :mailAddress, :password)";
         Map<String, Object> params = Map.of(
                 "name", administrator.getName(),
-                "mailAddress", administrator.getMailAddress(),
+                "mail_Address", administrator.getMailAddress(),
                 "password", administrator.getPassword());
         template.update(sql, params);
     }
@@ -48,12 +48,12 @@ public class AdministratorRepository {
      * @return administratorList 管理者情報のリスト
      */
     public Administrator findByMailAddressAndPassword(String mailAddress, String password) {
-        String sql = "SELECT * FROM administrators WHERE mailAddress = :mailAddress AND password = :password";
+        String sql = "SELECT id, name, mail_address, password FROM administrators WHERE mail_Address = :mail_Address AND password = :password";
         Map<String, Object> params = Map.of(
-                "mailAddress", mailAddress,
+                "mail_Address", mailAddress,
                 "password", password);
         List<Administrator> administratorList = template.query(sql, params, rowMapper);
-        if (administratorList.isEmpty()) {
+        if (administratorList.size() == 0) {
             return null;
         }
         return administratorList.get(0);
